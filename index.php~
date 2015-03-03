@@ -1,0 +1,195 @@
+<?php
+
+session_start();
+
+//here we define the language of the browser, open site with the language and set session for only doing it @ the beginning
+
+if (!isset($_SESSION['default_language_detected']) 
+    || $_SESSION['default_language_detected'] !== true)
+{
+$sprache = $_SERVER["HTTP_ACCEPT_LANGUAGE"];
+$sprache_cut = substr($sprache, 0, 2);
+
+if ($sprache_cut=="de" || $sprache_cut=="DE") {
+$_SESSION['deutsch'] = true; }
+elseif ($sprache_cut=="ru" || $sprache_cut=="RU") {
+$_SESSION['russian'] = true;}
+else {$_SESSION['english'] = true;}
+$_SESSION['default_language_detected'] = true;
+}
+
+// here we set another language environment if customer wants to
+
+if (isset($_SESSION['english']) 
+    || $_SESSION['english'] == true) {include ('languages/english.php'); /* echo 'English is set'; */ }
+
+elseif (isset($_SESSION['deutsch']) 
+    || $_SESSION['deutsch'] == true) {include ('languages/deutsch.php'); /* echo 'Deutsch is set'; */ }
+
+else {include ('languages/russian.php'); /* echo 'Russian is set'; */ }
+
+$page_name=$about_company;
+//$rand_color="#a19076";
+//$rand_color="#a1957b";
+$rand_color="#28282f";
+
+$current_page_name=basename($_SERVER['PHP_SELF']);
+
+function cut_off_extention_with_strlen ($current_page_name){
+
+$length=strlen($current_page_name);
+$needed_length=$length-4;
+$name_without_extention=substr($current_page_name, 0, $needed_length);
+return $name_without_extention;
+
+}
+
+$current_page_name_without_extention=cut_off_extention_with_strlen($current_page_name);
+
+?>
+
+
+<html>
+<header>
+<title><?php echo $site_title; echo " - "; echo $page_name; ?></title>
+
+<?php
+
+if (isset($_SESSION['english']) 
+    || $_SESSION['english'] == true) {$locale="en"; $path="seo_controls/html_header_$current_page_name_without_extention".'_'."$locale.php"; include ($path); /* echo 'English is set'; */ }
+
+elseif (isset($_SESSION['deutsch']) 
+    || $_SESSION['deutsch'] == true) {$locale="de"; $path="seo_controls/html_header_$current_page_name_without_extention".'_'."$locale.php"; include ($path); /* echo 'Deutsch is set'; */ }
+
+else {$locale="ru"; $path="seo_controls/html_header_$current_page_name_without_extention".'_'."$locale.php"; include ($path); /* echo 'Russian is set'; */ }
+
+?>
+
+<body>
+
+<!-- start of the right side -->
+
+<div style="float:left; width:20%; ">
+
+<a href="index.php" title="OMPDAO">OMPDAO</a>
+<br><br>
+<hr>
+<br>
+Notifications
+<br><br>
+Quick access links
+<br>
+(like folder and files in OS)
+<br><br>
+History of communication 
+<br>
+(open a new page with "For e-mail lovers" module and some other modules)
+<br><br>
+History of content entries
+<br>
+(today, yesterday, a week ago, a month ago, month, year, specific date)
+
+
+<!-- end of the right side -->
+</div>
+
+<!-- begin of centre -->
+
+<div id="center" style="float:left; width:60%; ">
+
+<!-- begin of header -->
+
+<div id="header" style="width:100%; ">
+
+<div style="float:left; ">All public content</div>
+<div style="float:left; margin-left:3px; display:none; "><button>Rename</button></div>
+<div style="float:left; ">&nbsp;|&nbsp;</div>
+<div style="float:left; ">My subscribed content</div>
+<div style="float:left; margin-left:3px; display:none; "><button>Rename</button></div>
+<div style="float:left; ">&nbsp;|&nbsp;</div>
+<div style="float:left; ">My own content</div>
+<div style="float:left; margin-left:3px; display:none; "><button>Rename</button></div>
+<div style="float:left; ">&nbsp;|&nbsp;</div>
+<div style="float:left; ">I like it/Starred content</div>
+<div style="float:left; margin-left:3px; display:none; "><button>Rename</button></div>
+<div style="float:left; ">&nbsp;|&nbsp;</div>
+<div style="float:left; ">My Favorites</div>
+<div style="float:left; margin-left:3px; display:none; "><button>Rename</button></div>
+<div style="float:left; margin-left:3px; display:none; "><button>Change link location order</button></div>
+<br><br>
+<hr>
+<br>
+Search_module
+<br><br>
+Sort content
+<br><br>
+Content - Presentation options (like a collapsable| expandable list, like a list, like thumbnails)
+<br><br>
+Owner of the content 
+<br><br>
+Users | Groups | Sites in a particular content piece: text, link, photo, video, music file or a combination of some | all of them
+<br><br>
+Content information and statistics: how many followers; how many times content was rebloged; how many time was looked at | read; what towns, cities, countries;  
+<br><br>
+Evaluate the content (оценить контент)
+<br><br>
+Recommend the content
+
+<!-- end of header -->
+</div>
+
+<!-- end of centre -->
+</div>
+
+<!-- begin of right side -->
+
+<div style="float:left; width:20%; ">
+
+<div style="float:left; ">Registration</div>
+<div style="float:left; ">&nbsp;|&nbsp;</div>
+<div style="float:left; ">Login</div>
+<div style="float:right; margin-right:20px; ">Controls</div>
+<br><br>
+<hr>
+<br>
+Followers
+<br><br>
+Following
+<br><br>
+Users
+<br><br>
+Groups
+<br><br>
+Users in the conversation
+<br><br>
+Groups in the conversation
+<br><br>
+Sites in the conversation
+<br><br>
+<h2>Categories</h2> 
+<a href="#">Add a new category</a>
+<br><br>
+category1
+<br>
+category2
+<br>
+category3
+<br><br>
+<h2>Tag Cloud</h2>
+<br>
+of your own content
+<br><br>
+of all public content
+<br><br>
+of your subscribed content
+
+
+
+
+<!-- end of right side -->
+</div>
+
+
+
+</body>
+</html>

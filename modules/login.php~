@@ -1,0 +1,24 @@
+<?php
+?>
+<html>
+<body>
+<center>
+Login module (no one is logged in yet)
+</center>
+Username <input name="username">
+<br>
+Password <input name="password">
+<br><br>
+<button>Login</button> <a href="" title="Register">Register*</a>
+<br><br>
+* производится посредством Ajax технологии
+</body>
+</html>
+
+<!--
+
+<a href=""></a>
+
+<li></li>
+
+-->

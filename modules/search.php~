@@ -1,0 +1,19 @@
+<?php
+?>
+<html>
+<body>
+<center>
+Search
+</center>
+<input name="search_field">
+<a href="" title="">Advanced search</a>
+</body>
+</html>
+
+<!--
+
+<a href=""></a>
+
+<li></li>
+
+-->

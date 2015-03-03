@@ -1,0 +1,18 @@
+textarea {font-size:8pt; color:black}
+button {font-size:6pt; color:black}
+input {font-size:8pt; color:black}
+table {font-size:10pt; color:black}
+div {font-size:8pt; color:black}
+span {font-size:8pt; color:black}
+li {font-size:8pt; color:black}
+ol {font-size:8pt; color:black}
+ul {font-size:8pt; color:black}
+
+.mal {font-size:8pt; color:blue}
+
+a:link    { font-size:8pt; color: orange; text-decoration: none; font-weight: bold }
+a:active  { color: gray; text-decoration: none; font-size: 125% }
+a:visited { color: teal; text-decoration: none; font-size: 8pt; font-weight: bold }
+a:hover { font-size:8pt; color: purple; text-decoration: none }
+
+h2 {font-size:10pt; color:black; font-weight: bold }

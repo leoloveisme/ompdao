@@ -1,0 +1,58 @@
+* { margin:0px; padding:0px; }
+
+html { height:100%; width=100%; }
+body { min-height:100%; position:relative; min-width:800px; }
+* html body { height:100%; }
+
+textarea {font-size:9pt; color:black}
+button {font-size:9pt; color:black}
+input {font-size:9pt; color:black}
+table {font-size:9pt; color:black}
+th {font-size:12pt; color:black}
+div {font-size:9pt; font-weight:bold; color:white}
+.recommend {font-size:9pt; font-weight:bold; color:black}
+span {font-size:9pt; font-weight:bold; color:white}
+
+h3 {font-size:12pt; color:#a92435; font-weight: bold }
+h2 {font-size:14pt; color:#a92435; font-weight: bold }
+h1 {font-size:16pt; color:#a92435; font-weight: bold }
+
+.info {font-size:12pt; color:white; }
+.mal_blue {font-weight:bold; color: #3657A8;}
+.mal {font-weight:bold; color: #28282f;}
+
+.slogan {font-size:14pt; font-weight:normal; color: #28282f;}
+
+a:link    { font-size:9pt; color: #a92435; text-decoration: none; font-weight: bold }
+a:active  { color: gray; text-decoration: none; font-size: 125% }
+a:visited { color: #a92435; text-decoration: none; font-size: 9pt; font-weight: bold }
+a:hover { font-size:9pt; color: #3657A8; text-decoration: none }
+
+a.header:link    { font-size:9pt; color: #a92435; text-decoration: none; font-weight: bold }
+a.header:active  { color: gray; text-decoration: none; font-size: 125% }
+a.header:visited { color: #a92435; text-decoration: none; font-size: 9pt; font-weight: bold }
+a.header:hover { font-size:9pt; color: #3657A8; text-decoration: none }
+
+a.lang_box:link    { font-size:9pt; color: #3657A8; text-decoration: none; font-weight: bold }
+a.lang_box:active  { color: gray; text-decoration: none; font-size: 125% }
+a.lang_box:visited { color: #3657A8; text-decoration: none; font-size: 9pt; font-weight: bold }
+a.lang_box:hover { font-size:9pt; color: #a92435;  text-decoration: none }
+
+a.footer:link    { font-size:9pt; color: #a92435; text-decoration: none; font-weight: bold }
+a.footer:active  { color: gray; text-decoration: none; font-size: 125% }
+a.footer:visited { color: #a92435; text-decoration: none; font-size: 9pt; font-weight: bold }
+a.footer:hover { font-size:9pt; color: #3657A8; text-decoration: none }
+
+a.products:link    { font-size:11pt; color: #a92435; text-decoration: none; font-weight: bold }
+a.products:active  { color: gray; text-decoration: none; font-size: 125% }
+a.products:visited { color: #a92435; text-decoration: none; font-size: 11pt; font-weight: bold }
+a.products:hover { font-size:11pt; color: #3657A8; text-decoration: none }
+
+a.ib:link    { font-size:9pt; color:white;  text-decoration: none; font-weight: bold }
+a.ib:active  { color: gray; text-decoration: none; font-size: 125% }
+a.ib:visited { color: #3657A8; text-decoration: none; font-size: 9pt; font-weight: bold }
+a.ib:hover { font-size:9pt; color: #a92435; text-decoration: none }
+
+
+
+

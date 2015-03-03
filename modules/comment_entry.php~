@@ -1,0 +1,18 @@
+<b>Comment entry area</b>
+<br><br>
+<input name="search_field" value="Write the title here. Not obligatory. Could be empty">
+<br><br><br>
+<textarea name="search_field">here will be format panel</textarea>
+<br><br><br>
+<textarea name="search_field">content entry area 
+Simply drop the file/link here or write some text or both
+</textarea>
+<br><br>
+<input type="radio" name="private" checked=""> Private <a href="faq/category/question_n" title="If you choose this option no one but you and content block owner will see your comment">[?]</a> <input type="radio" name="public"> Public <a href="faq/category/question_n" title="Everybody will see and be able to answer to your comment">[?]</a>
+<br><br>
+Tags: <input name="" value=""> <button>Add</button>
+<br><br>
+<input name="" value=""> <button>Upload</button> <button>Attach files</button>
+<br><br>
+<button>Save draft</button> <button>Save / Send</button>
+<br><br>

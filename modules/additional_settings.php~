@@ -1,0 +1,21 @@
+<?php
+?>
+<html>
+<body>
+<center>
+Additional settings
+</center>
+<br>
+<center>
+<input type="radio" name="" checked=""> User can comment/reply to your post <input type="radio" name=""> People cannot comment/reply to your post
+</center>
+</body>
+</html>
+
+<!--
+
+<a href=""></a>
+
+<li></li>
+
+-->

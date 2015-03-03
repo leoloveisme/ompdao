@@ -1,0 +1,77 @@
+<?php
+
+session_start();
+
+//here we define the language of the browser, open site with the language and set session for only doing it @ the beginning
+
+if (!isset($_SESSION['default_language_detected']) 
+    || $_SESSION['default_language_detected'] !== true)
+{
+$sprache = $_SERVER["HTTP_ACCEPT_LANGUAGE"];
+$sprache_cut = substr($sprache, 0, 2);
+
+if ($sprache_cut=="de" || $sprache_cut=="DE") {
+$_SESSION['deutsch'] = true; }
+elseif ($sprache_cut=="ru" || $sprache_cut=="RU") {
+$_SESSION['russian'] = true;}
+else {$_SESSION['english'] = true;}
+$_SESSION['default_language_detected'] = true;
+}
+
+// here we set another language environment if customer wants to
+
+if (isset($_SESSION['english']) 
+    || $_SESSION['english'] == true) {include ('languages/english.php'); /* echo 'English is set'; */ }
+
+elseif (isset($_SESSION['deutsch']) 
+    || $_SESSION['deutsch'] == true) {include ('languages/deutsch.php'); /* echo 'Deutsch is set'; */ }
+
+else {include ('languages/russian.php'); /* echo 'Russian is set'; */ }
+
+$page_name=$about_company;
+//$rand_color="#a19076";
+//$rand_color="#a1957b";
+$rand_color="#28282f";
+
+$current_page_name=basename($_SERVER['PHP_SELF']);
+
+function cut_off_extention_with_strlen ($current_page_name){
+
+$length=strlen($current_page_name);
+$needed_length=$length-4;
+$name_without_extention=substr($current_page_name, 0, $needed_length);
+return $name_without_extention;
+
+}
+
+$current_page_name_without_extention=cut_off_extention_with_strlen($current_page_name);
+
+?>
+
+<html>
+<header>
+<title><?php echo $site_title; echo " - "; echo $page_name; ?></title>
+
+<?php
+
+if (isset($_SESSION['english']) 
+    || $_SESSION['english'] == true) {$locale="en"; $path="seo_controls/html_header_$current_page_name_without_extention".'_'."$locale.php"; include ($path); /* echo 'English is set'; */ }
+
+elseif (isset($_SESSION['deutsch']) 
+    || $_SESSION['deutsch'] == true) {$locale="de"; $path="seo_controls/html_header_$current_page_name_without_extention".'_'."$locale.php"; include ($path); /* echo 'Deutsch is set'; */ }
+
+else {$locale="ru"; $path="seo_controls/html_header_$current_page_name_without_extention".'_'."$locale.php"; include ($path); /* echo 'Russian is set'; */ }
+
+?>
+
+<body>
+
+Header
+
+left side | centre | right side
+
+Footer 
+
+
+</body>
+</html>
